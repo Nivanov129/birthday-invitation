@@ -47,7 +47,7 @@ navLinks.forEach(a=>{
 document.getElementById('toTop').addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
 
 // RSVP link (замени на ссылку формы)
-const RSVP = "YOUR_GOOGLE_FORM_LINK_HERE";
+const RSVP = "https://docs.google.com/forms/d/e/1FAIpQLSd0wdBUpz-jen53QYkazvADCkaMZb1tYUamDgQEZgyKB96mKg/viewform?usp=dialog";
 document.getElementById('rsvpTop').href = RSVP;
 document.getElementById('rsvpMain').href = RSVP;
 
