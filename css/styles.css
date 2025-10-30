@@ -4,7 +4,7 @@
   --radius:18px;
 }
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;background:linear-gradient(180deg,#f8fff9 0%, #ffffff 60%);font-family:Rubik,system-ui,Arial;color:var(--dark)}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,#f8fff9 0%, #ffffff 60%);font-family:Rubik,system-ui,Arial;color:var(--dark);overflow-x:hidden}
 a{color:inherit}
 .nav{position:fixed;left:16px;top:16px;z-index:60;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);padding:8px 12px;border-radius:999px;box-shadow:var(--shadow);display:flex;gap:10px;flex-wrap:wrap}
 .nav a{font-weight:700;text-decoration:none;color:var(--accent);font-size:14px;padding:6px 10px;border-radius:999px;display:flex;gap:6px;align-items:center}
@@ -22,13 +22,13 @@ a{color:inherit}
 .small{font-size:14px;line-height:1.6;color:var(--muted)}
 .hero-slide{background:linear-gradient(180deg,#ffffff 0%, #e8fff0 100%);overflow:visible}
 .hero-content{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
-.hero-photos{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;justify-content:center;gap:clamp(16px,4vw,36px);margin-bottom:16px;width:min(100%,700px);height:clamp(160px,50vh,300px)}
-.hero-photo{background:#fff;border-radius:32px;box-shadow:0 22px 38px rgba(18,50,41,0.14);position:relative;overflow:hidden;transition:transform .4s ease, box-shadow .4s ease}
+.hero-photos{position:relative;display:flex;align-items:center;justify-content:center;gap:clamp(24px,5vw,60px);margin-bottom:16px;width:min(100%,760px)}
+.hero-photo{background:#fff;border-radius:32px;box-shadow:0 22px 38px rgba(18,50,41,0.14);position:relative;overflow:hidden;transition:transform .4s ease, box-shadow .4s ease;flex:0 1 clamp(200px,28vw,300px);aspect-ratio:3/4;min-width:0}
 .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .hero-photo::after{content:"";position:absolute;inset:18px;border-radius:20px;background:rgba(255,255,255,0.35);mix-blend-mode:screen;pointer-events:none}
 .hero-photos:hover .hero-photo{box-shadow:0 26px 44px rgba(18,50,41,0.18);transform:translateY(-6px)}
-.hero-love{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:12px;font-family:'Gloria Hallelujah',Rubik,Arial,sans-serif;font-size:40px;color:var(--accent);padding:14px 28px;border-radius:999px;background:rgba(255,255,255,0.82);backdrop-filter:blur(12px);box-shadow:0 18px 34px rgba(18,50,41,0.18)}
-.hero-heart{font-size:32px;display:block}
+.hero-love{position:relative;display:flex;align-items:center;justify-content:center;font-family:'Gloria Hallelujah',Rubik,Arial,sans-serif;font-size:40px;color:var(--accent);padding:16px 30px;border-radius:999px;background:rgba(255,255,255,0.82);backdrop-filter:blur(12px);box-shadow:0 18px 34px rgba(18,50,41,0.18);flex:0 0 auto}
+.hero-heart{font-size:36px;display:block}
 .hero-actions{display:flex;gap:12px;justify-content:center;margin-top:18px}
 .section-actions{display:flex;gap:12px;justify-content:center;margin:20px 0 10px}
 .btn{display:inline-block;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:800}
@@ -90,7 +90,7 @@ a{color:inherit}
 .rsvp-frame-2{--tilt:11deg}
 @media (max-width:900px){
   .grid{grid-template-columns:repeat(2,1fr)}
-  .hero-photos{height:clamp(280px,60vh,560px)}
+  .hero-photo{flex:0 1 clamp(220px,32vw,320px)}
   .big{font-size:36px}
   .photo-frame{width:140px;height:170px}
 
@@ -101,10 +101,10 @@ a{color:inherit}
   .two-col{flex-direction:column;align-items:flex-start}
   .timeline-item{flex-direction:column;align-items:flex-start}
   .timeline-item .time{min-width:0}
-  .hero-photos{grid-template-columns:repeat(2,minmax(0,1fr));height:auto;gap:14px}
-  .hero-love{font-size:28px;padding:8px 18px}
+  .hero-photos{gap:10px}
+  .hero-photo{flex:1 1 36%}
+  .hero-love{font-size:26px;padding:8px 16px;white-space:nowrap}
   .hero-heart{font-size:26px}
-  .hero-photo{width:100%;aspect-ratio:3/4}
   .hero-photo::after{inset:12px;border-radius:18px}
   .photo-montage{display:none}
 
