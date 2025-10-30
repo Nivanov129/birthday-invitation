@@ -22,7 +22,7 @@ const observer = new IntersectionObserver((entries)=>{
 document.querySelectorAll('.slide').forEach(sec=>observer.observe(sec));
 
 // Scroll spy
-const sectionIds = ['hero','about','gallery','toys','plan','place','rsvp'];
+const sectionIds = ['hero','about','toys','place','rsvp'];
 const navLinks = Array.from(document.querySelectorAll('.nav a'));
 const spy = new IntersectionObserver((entries)=>{
   entries.forEach(ent=>{
