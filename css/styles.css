@@ -19,6 +19,7 @@ a{color:inherit}
 .big{font-family:'Gloria Hallelujah',Rubik,Arial,sans-serif;font-size:48px;margin:6px 0;color:var(--accent)}
 .lead{font-size:18px;margin:8px 0 18px;color:var(--dark)}
 .sub{color:var(--muted);max-width:780px;margin:0 auto 12px}
+.small{font-size:14px;line-height:1.6;color:var(--muted)}
 .hero-slide{background:linear-gradient(180deg,#ffffff 0%, #e8fff0 100%);overflow:visible}
 .hero-content{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
 .hero-photos{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;justify-content:center;gap:clamp(16px,4vw,36px);margin-bottom:16px;width:min(100%,700px);height:clamp(160px,50vh,300px)}
@@ -41,6 +42,12 @@ a{color:inherit}
 .countdown small{display:block;color:var(--muted);font-size:12px}
 .about-slide{background:linear-gradient(180deg,#f8fff9 0%, #ffffff 100%)}
 .features{margin-top:12px;list-style:disc;padding-left:20px;color:var(--muted)}
+.schedule-slide{background:linear-gradient(180deg,#f9fff6 0%, #ffffff 60%, #f6fff5 100%)}
+.timeline{display:flex;flex-direction:column;gap:18px;margin:26px auto 0;max-width:640px}
+.timeline-item{display:flex;gap:18px;align-items:flex-start;background:var(--card);padding:18px 20px;border-radius:18px;box-shadow:var(--shadow)}
+.timeline-item .time{font-family:'Gloria Hallelujah',Rubik,Arial,sans-serif;font-size:26px;color:var(--accent);min-width:70px}
+.timeline-item h3{margin:0 0 6px;font-size:18px;color:var(--dark)}
+.timeline-item p{margin:0}
 .toys-slide{background:linear-gradient(180deg,#f6fff5 0%, #f2fff8 100%);padding-bottom:120px}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:18px}
 .card-item{background:var(--card);padding:14px;border-radius:14px;box-shadow:var(--shadow);text-align:center;transition:transform .18s ease, box-shadow .18s ease;opacity:0;transform:translateY(12px)}
@@ -92,6 +99,8 @@ a{color:inherit}
   .nav{left:8px;top:8px;padding:6px 8px;font-size:13px}
   .grid{grid-template-columns:1fr}
   .two-col{flex-direction:column-reverse}
+  .timeline-item{flex-direction:column;align-items:flex-start}
+  .timeline-item .time{min-width:0}
   .hero-photos{display:flex;flex-direction:column;align-items:center;height:auto;gap:18px}
   .hero-love{position:static;transform:none;font-size:28px;padding:0;background:transparent;box-shadow:none;backdrop-filter:none;margin-top:6px}
   .hero-heart{font-size:28px}
