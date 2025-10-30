@@ -22,7 +22,7 @@ const observer = new IntersectionObserver((entries)=>{
 document.querySelectorAll('.slide').forEach(sec=>observer.observe(sec));
 
 // Scroll spy
-const sectionIds = ['hero','about','gallery','toys','plan','place','rsvp'];
+const sectionIds = ['hero','about','toys','place','rsvp'];
 const navLinks = Array.from(document.querySelectorAll('.nav a'));
 const spy = new IntersectionObserver((entries)=>{
   entries.forEach(ent=>{
@@ -47,9 +47,14 @@ navLinks.forEach(a=>{
 document.getElementById('toTop').addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
 
 // RSVP link (замени на ссылку формы)
-const RSVP = "YOUR_GOOGLE_FORM_LINK_HERE";
+const RSVP = "https://docs.google.com/forms/d/e/1FAIpQLSd0wdBUpz-jen53QYkazvADCkaMZb1tYUamDgQEZgyKB96mKg/viewform?usp=dialog";
 document.getElementById('rsvpTop').href = RSVP;
 document.getElementById('rsvpMain').href = RSVP;
+
+// Wishlist link (замени на ссылку списка желаний)
+const WISHLIST = "YOUR_WISHLIST_LINK_HERE";
+const wishlistBtn = document.getElementById('wishlistBtn');
+if (wishlistBtn) wishlistBtn.href = WISHLIST;
 
 // Arrow navigation
 document.addEventListener('keydown', (e)=>{
