@@ -1,0 +1,66 @@
+// Countdown
+const target = new Date("2025-12-13T16:00:00");
+function pad(n){return String(n).padStart(2,'0')}
+function tick(){
+  const now = new Date();
+  let diff = Math.max(0, target - now);
+  const days = Math.floor(diff / (1000*60*60*24)); diff -= days*(1000*60*60*24);
+  const hours = Math.floor(diff / (1000*60*60)); diff -= hours*(1000*60*60);
+  const minutes = Math.floor(diff / (1000*60)); diff -= minutes*(1000*60);
+  const seconds = Math.floor(diff/1000);
+  document.getElementById('d').textContent = pad(days);
+  document.getElementById('h').textContent = pad(hours);
+  document.getElementById('m').textContent = pad(minutes);
+  document.getElementById('s').textContent = pad(seconds);
+}
+tick(); setInterval(tick,1000);
+
+// Reveal on scroll
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(ent=>{ if(ent.isIntersecting) ent.target.classList.add('inview'); });
+},{threshold:0.2});
+document.querySelectorAll('.slide').forEach(sec=>observer.observe(sec));
+
+// Scroll spy
+const sectionIds = ['hero','about','gallery','toys','plan','place','rsvp'];
+const navLinks = Array.from(document.querySelectorAll('.nav a'));
+const spy = new IntersectionObserver((entries)=>{
+  entries.forEach(ent=>{
+    if(ent.isIntersecting){
+      const id = ent.target.id;
+      navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+    }
+  });
+},{rootMargin:'-40% 0px -55% 0px', threshold:0});
+sectionIds.forEach(id=>{ const el = document.getElementById(id); if(el) spy.observe(el); });
+
+// Smooth scroll on nav click
+navLinks.forEach(a=>{
+  a.addEventListener('click', (e)=>{
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    target?.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+
+// Back to top
+document.getElementById('toTop').addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+// RSVP link (замени на ссылку формы)
+const RSVP = "YOUR_GOOGLE_FORM_LINK_HERE";
+document.getElementById('rsvpTop').href = RSVP;
+document.getElementById('rsvpMain').href = RSVP;
+
+// Arrow navigation
+document.addEventListener('keydown', (e)=>{
+  if(e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+  const sections = sectionIds.map(id=>document.getElementById(id));
+  const y = window.scrollY + window.innerHeight*0.2;
+  let currentIndex = sections.findIndex(s => s && s.offsetTop <= y && (s.offsetTop + s.offsetHeight) > y);
+  if(currentIndex === -1) currentIndex = 0;
+  if(e.key === 'ArrowDown' && currentIndex < sections.length-1){
+    e.preventDefault(); sections[currentIndex+1].scrollIntoView({behavior:'smooth'});
+  } else if(e.key === 'ArrowUp' && currentIndex > 0){
+    e.preventDefault(); sections[currentIndex-1].scrollIntoView({behavior:'smooth'});
+  }
+});
