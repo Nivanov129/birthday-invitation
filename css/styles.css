@@ -98,14 +98,14 @@ a{color:inherit}
 @media (max-width:600px){
   .nav{left:8px;top:8px;padding:6px 8px;font-size:13px}
   .grid{grid-template-columns:1fr}
-  .two-col{flex-direction:column-reverse}
+  .two-col{flex-direction:column;align-items:flex-start}
   .timeline-item{flex-direction:column;align-items:flex-start}
   .timeline-item .time{min-width:0}
-  .hero-photos{display:flex;flex-direction:column;align-items:center;height:auto;gap:18px}
-  .hero-love{position:static;transform:none;font-size:28px;padding:0;background:transparent;box-shadow:none;backdrop-filter:none;margin-top:6px}
-  .hero-heart{font-size:28px}
-  .hero-photo{width:min(100%,360px);aspect-ratio:3/4}
-  .hero-photo::after{inset:14px;border-radius:18px}
+  .hero-photos{grid-template-columns:repeat(2,minmax(0,1fr));height:auto;gap:14px}
+  .hero-love{font-size:28px;padding:8px 18px}
+  .hero-heart{font-size:26px}
+  .hero-photo{width:100%;aspect-ratio:3/4}
+  .hero-photo::after{inset:12px;border-radius:18px}
   .photo-montage{display:none}
 
 }
