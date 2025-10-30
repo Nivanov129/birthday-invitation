@@ -10,7 +10,6 @@
 <body>
   <nav class="nav">
     <a href="#hero"><span>01</span> Главная</a>
-    <a href="#about"><span>02</span> О событии</a>
     <a href="#toys"><span>03</span> Вещи</a>
     <a href="#place"><span>04</span> Место</a>
     <a href="#rsvp"><span>05</span> Ответить</a>
@@ -28,16 +27,14 @@
             <span class="hero-heart">😎</span>
           </div>
           <figure class="hero-photo hero-photo-right">
-            <img src="assets/placeholders/photo6.jpg" >
+            <img src="assets/placeholders/photo.jpg" >
           </figure>
         </div>
-        <h1 class="big">Никите 30.</h1>
+        <h1 class="big">Никите 30 🎂</h1>
         <p class="lead">13 декабря 2025 • 16:00 • Мавританский Дворик, Тольятти</p>
         <p class="sub">Приходи в канун моего юбилея на теплую встречу моих родных и друзей!</p>
         <div class="hero-actions">
           <a id="rsvpTop" class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd0wdBUpz-jen53QYkazvADCkaMZb1tYUamDgQEZgyKB96mKg/viewform?usp=dialog" >Ответить (Google Form)</a>
-
-          <a class="btn ghost" href="#about">Узнать больше</a>
         </div>
         <div class="countdown" aria-live="polite">
           <div><span id="d">--</span><small>дней</small></div>
@@ -48,25 +45,6 @@
       </div>
     </section>
 
-    <section id="about" class="slide about-slide reveal">
-      <div class="photo-montage" aria-hidden="true">
-        <div class="photo-frame about-frame-1"></div>
-        <div class="photo-frame about-frame-2"></div>
-      </div>
-      <div class="container two-col">
-        <div class="text">
-          <h2>Немного о празднике</h2>
-          <p>Помнишь, как в детстве казалось, что целый мир помещается в коробке с игрушками? Я хочу вернуть это ощущение — уют, простую радость и немного приключения. На празднике будут моменты для воспоминаний, фотографии, живые беседы и тёплая компания.</p>
-          <ul class="features">
-            <li>Истории о том, как изобретения меняли мир</li>
-            <li>Раритетные экспонаты и фотографии</li>
-            <li>Немного ностальгии и много вдохновения</li>
-          </ul>
-        </div>
-       
-      </div>
-    </section>
-
     <section id="toys" class="slide toys-slide reveal">
       <div class="photo-montage" aria-hidden="true">
         <div class="photo-frame toys-frame-1"></div>
@@ -74,16 +52,16 @@
       </div>
       <div class="container">
         <h2>Взрослые и детские вещи</h2>
-        <p class="muted">Это часть моей истории — от первых звуковозаписывающих устройств до цифровых новинок.</p>
+        <p class="muted">Это часть моей жизни - от аналоговых звуковых устройств до цифровых новинок.</p>
         <div class="grid">
-          <article class="card-item reveal-child"><img src="../birthday-invitation/assets/images/40698_main.jpg.png" alt="Конструктор из деревянных и металлических деталей" loading="lazy"><h3>Конструктор</h3><p class="small">Обожаю собирать механизмы с нуля — этот набор дарит чувство изобретателя и возвращает в детские эксперименты.</p></article>
-          <article class="card-item reveal-child"><img src="../birthday-invitation/assets/images/Vinyl_color-blue2-vinyl-1000x1000.png" alt="Виниловая пластинка и проигрыватель" loading="lazy"><h3>Винил</h3><p class="small">Аромат винила, щелчки иглы и тёплый звук — лучший способ прожить любимые альбомы по-новому.</p></article>
           <article class="card-item reveal-child"><img src="../birthday-invitation/assets/images/0380_The_One_Ring_EN.png" alt="Карточки Magic: The Gathering" loading="lazy"><h3>Magic: The Gathering</h3><p class="small">Коллекционные дуэли про стратегию и фантазию — отличный повод собраться с друзьями и сыграть пару партий.</p></article>
+          <article class="card-item reveal-child"><img src="../birthday-invitation/assets/images/Vinyl_color-blue2-vinyl-1000x1000.png" alt="Виниловая пластинка и проигрыватель" loading="lazy"><h3>Винил</h3><p class="small">Аромат винила, щелчки иглы и тёплый звук — лучший способ прожить любимые альбомы по-новому.</p></article>
+          <article class="card-item reveal-child"><img src="../birthday-invitation/assets/images/40698_main.jpg.png" alt="Конструктор из деревянных и металлических деталей" loading="lazy"><h3>Конструктор</h3><p class="small">Обожаю собирать механизмы с нуля — этот набор дарит чувство изобретателя и возвращает в детские эксперименты.</p></article>
+
         </div>
         <div class="section-actions">
           <a id="wishlistBtn" class="btn secondary" href="#" target="_blank" rel="noopener">Wishlist 🎁</a>
         </div>
-        <p class="muted small center">Ссылку можно указать позже в <code>js/script.js</code> (переменная WISHLIST).</p>
       </div>
     </section>
 
@@ -100,7 +78,7 @@
           <p class="muted">Ниже — интерактивная карта с точным местом встречи от Яндекс.Карт.</p>
         </div>
         <div class="map-placeholder">
-          <div class="iframe-box" id="mapBox"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Add1f13640dd8f71a20695e0a52cd03011079d0aa52a2b3704eabe005bd0c8dba&amp;source=constructor" width="100%" height="400" frameborder="0" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Мавританский Дворик на карте"></iframe></div>
+          <div class="iframe-box" id="mapBox"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0543959cacf45fab753ca021845a3cc7eca9f181ba88e7b1e6aada59231a1868&amp;source=constructor" width="100%" height="400" frameborder="0" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Мавританский Дворик на карте"></iframe></div>
         </div>
       </div>
     </section>
