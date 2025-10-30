@@ -56,6 +56,58 @@ const WISHLIST = "YOUR_WISHLIST_LINK_HERE";
 const wishlistBtn = document.getElementById('wishlistBtn');
 if (wishlistBtn) wishlistBtn.href = WISHLIST;
 
+// Hero comparison slider
+document.querySelectorAll('[data-compare]').forEach(frame => {
+  const overlay = frame.querySelector('.compare-overlay');
+  const handle = frame.querySelector('.compare-handle');
+  const range = frame.querySelector('.compare-range');
+  if (!overlay || !handle || !range) return;
+
+  const clamp = (value) => {
+    const bounded = Math.min(100, Math.max(0, Number(value)));
+    return Math.round(bounded * 10) / 10;
+  };
+  const setPosition = (value) => {
+    const safe = clamp(value);
+    const pct = safe + '%';
+    overlay.style.width = pct;
+    handle.style.left = pct;
+  };
+
+  const syncFromEvent = (clientX) => {
+    const rect = frame.getBoundingClientRect();
+    const raw = ((clientX - rect.left) / rect.width) * 100;
+    setPosition(raw);
+    range.value = clamp(raw);
+  };
+
+  range.addEventListener('input', () => setPosition(range.value));
+
+  frame.addEventListener('pointerdown', (event) => {
+    frame.setPointerCapture(event.pointerId);
+    syncFromEvent(event.clientX);
+  });
+
+  frame.addEventListener('pointermove', (event) => {
+    if (!frame.hasPointerCapture(event.pointerId)) return;
+    syncFromEvent(event.clientX);
+  });
+
+  frame.addEventListener('pointerup', (event) => {
+    if (frame.hasPointerCapture(event.pointerId)) {
+      frame.releasePointerCapture(event.pointerId);
+    }
+  });
+
+  frame.addEventListener('pointercancel', (event) => {
+    if (frame.hasPointerCapture(event.pointerId)) {
+      frame.releasePointerCapture(event.pointerId);
+    }
+  });
+
+  setPosition(range.value || 50);
+});
+
 // Arrow navigation
 document.addEventListener('keydown', (e)=>{
   if(e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;

@@ -18,30 +18,36 @@
 
   <main class="slides">
     <section id="hero" class="slide hero-slide reveal">
-      <div class="photo-montage" aria-hidden="true">
-        <div class="photo-frame hero-frame-1"></div>
-        <div class="photo-frame hero-frame-2"></div>
-      </div>
-      <div class="container">
-        <h1 class="big">Мне скоро 30! 🎉</h1>
-        <p class="lead">13 декабря 2025 • 16:00 • Мавританский Дворик, Тольятти</p>
-        <p class="sub">Приходи в канун моего юбилея на теплую встречу моих родных и друзей!</p>
-        <div class="hero-actions">
-          <a id="rsvpTop" class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd0wdBUpz-jen53QYkazvADCkaMZb1tYUamDgQEZgyKB96mKg/viewform?usp=dialog" >Ответить (Google Form)</a>
+      <div class="container hero-layout">
+        <div class="hero-comparison">
+          <div class="compare-frame" data-compare>
+            <img src="assets/placeholders/photo3.jpg" alt="Фото взрослого Вани" class="compare-image compare-image-after" loading="lazy">
+            <div class="compare-overlay">
+              <img src="assets/placeholders/photo6.jpg" alt="Фото Вани в детстве" class="compare-image" loading="lazy">
+            </div>
+            <div class="compare-handle" aria-hidden="true">
+              <span class="compare-icon">⇆</span>
+            </div>
+            <input type="range" min="0" max="100" step="0.1" value="50" class="compare-range" aria-label="Сравнить взрослое и детское фото">
+          </div>
+          <p class="hero-caption">Ваня — от детства до праздника 30-летия</p>
+        </div>
+        <div class="hero-text">
+          <h1 class="big">Мне скоро 30! 🎉</h1>
+          <p class="lead">13 декабря 2025 • 16:00 • Мавританский Дворик, Тольятти</p>
+          <p class="sub">Приходи в канун моего юбилея на теплую встречу моих родных и друзей!</p>
+          <div class="hero-actions">
+            <a id="rsvpTop" class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd0wdBUpz-jen53QYkazvADCkaMZb1tYUamDgQEZgyKB96mKg/viewform?usp=dialog" >Ответить (Google Form)</a>
 
-          <a class="btn ghost" href="#about">Узнать больше</a>
+            <a class="btn ghost" href="#about">Узнать больше</a>
+          </div>
+          <div class="countdown" aria-live="polite">
+            <div><span id="d">--</span><small>дней</small></div>
+            <div><span id="h">--</span><small>часов</small></div>
+            <div><span id="m">--</span><small>минут</small></div>
+            <div><span id="s">--</span><small>сек</small></div>
+          </div>
         </div>
-        <div class="countdown" aria-live="polite">
-          <div><span id="d">--</span><small>дней</small></div>
-          <div><span id="h">--</span><small>часов</small></div>
-          <div><span id="m">--</span><small>минут</small></div>
-          <div><span id="s">--</span><small>сек</small></div>
-        </div>
-      </div>
-      <div class="hero-illustration">
-        <img src="../birthday-invitation/assets/images/Vinyl_color-blue2-vinyl-1000x1000.png" alt="Иллюстрация с виниловым проигрывателем" class="ill vinyl" loading="lazy">
-        <img src="../birthday-invitation/assets/images/40698_main.jpg.png" alt="Иллюстрация лего" class="ill lego" loading="lazy">
-        <img src="../birthday-invitation/assets/images/foni-papik-pro-a0l3-p-kartinki-gadzheti-na-prozrachnom-fone-5.png" alt="Иллюстрация гаджеты" class="ill gadjet" loading="lazy">
       </div>
     </section>
 
