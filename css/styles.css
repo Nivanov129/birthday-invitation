@@ -54,7 +54,7 @@ a{color:inherit}
 .slide > *:not(.photo-montage):not(.hero-illustration){position:relative;z-index:1}
 .photo-frame{position:absolute;width:180px;height:220px;background:#d1ede0;border:6px solid #fff;border-radius:22px;box-shadow:0 22px 38px rgba(18,50,41,0.12);background-size:cover;background-position:center;transition:transform .6s ease;transform:rotate(var(--tilt,0deg))}
 .photo-frame::after{content:"";position:absolute;inset:16px;border-radius:14px;background:rgba(255,255,255,0.18);mix-blend-mode:screen;opacity:0.6}
-.hero-frame-1{top:16%;left:30%;background-image:url('../assets/placeholders/photo3.jpg')}
+.hero-frame-1{top:16%;left:36%;background-image:url('../assets/placeholders/photo3.jpg')}
 .hero-frame-2{bottom:50%;right:26%;background-image:url('../assets/placeholders/photo.jpg')}
 .about-frame-1{top:12%;right:6%;background-image:url('../assets/placeholders/photo2.jpg')}
 .about-frame-2{bottom:6%;left:14%;background-image:url('../assets/placeholders/photo4.jpg')}
