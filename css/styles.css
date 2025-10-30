@@ -80,6 +80,7 @@ a{color:inherit}
   .hero-illustration img.ill{width:96px}
   .big{font-size:36px}
   .photo-frame{width:140px;height:170px}
+
 }
 @media (max-width:600px){
   .nav{left:8px;top:8px;padding:6px 8px;font-size:13px}
@@ -87,4 +88,5 @@ a{color:inherit}
   .two-col{flex-direction:column-reverse}
   .hero-illustration{display:none}
   .photo-montage{display:none}
+
 }
