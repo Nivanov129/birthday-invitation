@@ -54,16 +54,16 @@ a{color:inherit}
 .slide > *:not(.photo-montage):not(.hero-illustration){position:relative;z-index:1}
 .photo-frame{position:absolute;width:180px;height:220px;background:#d1ede0;border:6px solid #fff;border-radius:22px;box-shadow:0 22px 38px rgba(18,50,41,0.12);background-size:cover;background-position:center;transition:transform .6s ease;transform:rotate(var(--tilt,0deg))}
 .photo-frame::after{content:"";position:absolute;inset:16px;border-radius:14px;background:rgba(255,255,255,0.18);mix-blend-mode:screen;opacity:0.6}
-.hero-frame-1{top:6%;left:2%;background-image:url('../assets/placeholders/photo1.svg')}
-.hero-frame-2{bottom:10%;right:6%;background-image:url('../assets/placeholders/photo2.svg')}
-.about-frame-1{top:12%;right:6%;background-image:url('../assets/placeholders/photo3.svg')}
-.about-frame-2{bottom:6%;left:14%;background-image:url('../assets/placeholders/photo4.svg')}
-.toys-frame-1{top:4%;left:8%;background-image:url('../assets/placeholders/photo5.svg')}
-.toys-frame-2{bottom:8%;right:10%;background-image:url('../assets/placeholders/photo6.svg')}
-.place-frame-1{top:10%;left:6%;background-image:url('../assets/placeholders/photo7.svg')}
-.place-frame-2{bottom:6%;right:8%;background-image:url('../assets/placeholders/photo8.svg')}
-.rsvp-frame-1{top:16%;left:18%;background-image:url('../assets/placeholders/photo2.svg')}
-.rsvp-frame-2{bottom:12%;right:18%;background-image:url('../assets/placeholders/photo5.svg')}
+.hero-frame-1{top:16%;left:30%;background-image:url('../assets/placeholders/photo3.jpg')}
+.hero-frame-2{bottom:50%;right:26%;background-image:url('../assets/placeholders/photo.jpg')}
+.about-frame-1{top:12%;right:6%;background-image:url('../assets/placeholders/photo2.jpg')}
+.about-frame-2{bottom:6%;left:14%;background-image:url('../assets/placeholders/photo4.jpg')}
+.toys-frame-1{top:4%;left:8%;background-image:url('../assets/placeholders/photo5.jpg')}
+.toys-frame-2{bottom:8%;right:10%;background-image:url('../assets/placeholders/photo6.jpg')}
+.place-frame-1{top:10%;left:6%;background-image:url('../assets/placeholders/photo7.jpg')}
+.place-frame-2{bottom:6%;right:8%;background-image:url('../assets/placeholders/photo8.jpg')}
+.rsvp-frame-1{top:16%;left:18%;background-image:url('../assets/placeholders/photo9.jpg')}
+.rsvp-frame-2{bottom:12%;right:18%;background-image:url('../assets/placeholders/photo10.jpg')}
 .slide:hover .photo-frame{transform:scale(1.02) rotate(var(--tilt,0deg))}
 .hero-frame-1{--tilt:-6deg}
 .hero-frame-2{--tilt:8deg}
