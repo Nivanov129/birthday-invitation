@@ -52,9 +52,7 @@ document.getElementById('rsvpTop').href = RSVP;
 document.getElementById('rsvpMain').href = RSVP;
 
 // Wishlist link (замени на ссылку списка желаний)
-const WISHLIST = "YOUR_WISHLIST_LINK_HERE";
 const wishlistBtn = document.getElementById('wishlistBtn');
-if (wishlistBtn) wishlistBtn.href = WISHLIST;
 
 // Arrow navigation
 document.addEventListener('keydown', (e)=>{
