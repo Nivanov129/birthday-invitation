@@ -51,6 +51,23 @@ const RSVP = "https://docs.google.com/forms/d/e/1FAIpQLSd0wdBUpz-jen53QYkazvADCk
 document.getElementById('rsvpTop').href = RSVP;
 document.getElementById('rsvpMain').href = RSVP;
 
+// Calendar button behaviour
+const calendarBtn = document.getElementById('addToCalendar');
+if(calendarBtn){
+  const googleCalendarLink = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=%D0%94%D0%B5%D0%BD%D1%8C+%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F+%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D1%8B&details=%D0%A2%D1%91%D0%BF%D0%BB%D0%B0%D1%8F+%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B0+%D0%B4%D1%80%D1%83%D0%B7%D0%B5%D0%B9+%D0%B8+%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D1%85.&location=%D0%9C%D0%B0%D0%B2%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9+%D0%94%D0%B2%D0%BE%D1%80%D0%B8%D0%BA%2C+%D0%A2%D0%BE%D0%BB%D1%8C%D1%8F%D1%82%D1%82%D0%B8&dates=20251213T160000/20251213T200000&ctz=Europe%2FSamara";
+  const appleCalendarLink = new URL('assets/calendar/nikita-30-birthday.ics', window.location.href).toString();
+  const appleDevicePattern = /(iPad|iPhone|iPod|Macintosh)/i;
+  if(appleDevicePattern.test(navigator.userAgent || "")){
+    calendarBtn.href = appleCalendarLink;
+    calendarBtn.removeAttribute('target');
+    calendarBtn.rel = 'noopener';
+  } else {
+    calendarBtn.href = googleCalendarLink;
+    calendarBtn.target = '_blank';
+    calendarBtn.rel = 'noopener';
+  }
+}
+
 // Wishlist link (замени на ссылку списка желаний)
 const wishlistBtn = document.getElementById('wishlistBtn');
 

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nikita Birthday Invitation//RU
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:nikita-birthday-2025@invitation.example
+DTSTAMP:20240715T120000Z
+DTSTART;TZID=Europe/Samara:20251213T160000
+DTEND;TZID=Europe/Samara:20251213T200000
+SUMMARY:День рождения Никиты
+DESCRIPTION:Тёплая встреча друзей и родных в Мавританском Дворике.
+LOCATION:Мавританский Дворик, Тольятти
+END:VEVENT
+END:VCALENDAR
